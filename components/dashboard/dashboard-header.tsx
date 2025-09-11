@@ -39,7 +39,7 @@ export function DashboardHeader({ user, profile }: DashboardHeaderProps) {
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-semibold text-slate-900">Digital Shield</h1>
+              <h1 className="text-xl font-semibold text-slate-900">Digital Footprint Risk Analyzer</h1>
               <p className="text-sm text-slate-500">Risk Assessment Dashboard</p>
             </div>
           </div>

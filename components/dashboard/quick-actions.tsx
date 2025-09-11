@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Search, Mail, Users, FileText, Settings } from "lucide-react"
+import { Search, Mail, Users, FileText, Settings, Eye } from "lucide-react"
 import Link from "next/link"
 
 export function QuickActions() {
@@ -20,6 +20,13 @@ export function QuickActions() {
       icon: Users,
       href: "/dashboard/new-scan?type=social_media",
       color: "bg-purple-500",
+    },
+    {
+      title: "Text Privacy Check",
+      description: "Scan text for personal information using AI",
+      icon: Eye,
+      href: "/dashboard/ner-analysis",
+      color: "bg-red-500",
     },
     {
       title: "Full Assessment",

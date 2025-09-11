@@ -5,6 +5,8 @@ import { RiskOverview } from "@/components/dashboard/risk-overview"
 import { RecentScans } from "@/components/dashboard/recent-scans"
 import { QuickActions } from "@/components/dashboard/quick-actions"
 import { SecurityInsights } from "@/components/dashboard/security-insights"
+import { SocialMediaScanner } from "@/components/dashboard/social-media-scanner"
+import { NERAnalyzer } from "@/components/dashboard/ner-analyzer"
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -47,11 +49,13 @@ export default async function DashboardPage() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             <RiskOverview latestScan={latestScan} />
+            <NERAnalyzer />
             <RecentScans scans={recentScans || []} />
           </div>
 
           {/* Sidebar */}
           <div className="space-y-8">
+            <SocialMediaScanner />
             <QuickActions />
             <SecurityInsights latestScan={latestScan} />
           </div>
